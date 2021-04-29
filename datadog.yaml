@@ -1,0 +1,14 @@
+apm_config:
+  apm_non_local_traffic: true
+datadog:
+  image: 'datadog/docker-dd-agent:latest'
+  deployment_strategy: app_node_got
+  environment:
+    - API_KEY=778fd2c42a2016cc6b6e70a0f4b680c5	
+    - HOSTNAME=danielesilva
+  privileged: true
+  restart: on-failure
+  volumes:
+    - '/var/run/docker.sock:/var/run/docker.sock'
+    - '/proc:/host/proc:ro'
+    - '/sys/fs/cgroup:/host/sys/fs/cgroup:ro'
