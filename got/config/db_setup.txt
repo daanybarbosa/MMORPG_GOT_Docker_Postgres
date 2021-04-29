@@ -1,4 +1,4 @@
-const Pool = require('pg').Pool;
+/*const Pool = require('pg').Pool;
 const database = require('./dbConnection');
 const connectPg = database.connectPg;
 
@@ -38,4 +38,4 @@ console.log('DB Feito!');
 
 query.on('end', function() {
     client.end();
-});
+});*/
